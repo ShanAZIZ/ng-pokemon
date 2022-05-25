@@ -1,121 +1,121 @@
-import { Pokemon } from './pokemon.component';
+import { PokemonProps } from './pokemon.component';
 
-export type PokemonFire = Pokemon & {
+export type PokemonFire = PokemonProps & {
   type: 'fire';
 };
-export type PokemonIce = Pokemon & {
+export type PokemonIce = PokemonProps & {
   type: 'ice';
 };
-export type PokemonWater = Pokemon & {
+export type PokemonWater = PokemonProps & {
   type: 'water';
 };
-export type PokemonGrass = Pokemon & {
+export type PokemonGrass = PokemonProps & {
   type: 'grass';
 };
-export type PokemonElectric = Pokemon & {
+export type PokemonElectric = PokemonProps & {
   type: 'electric';
 };
-export type PokemonGround = Pokemon & {
+export type PokemonGround = PokemonProps & {
   type: 'ground';
 };
-export type PokemonFlying = Pokemon & {
+export type PokemonFlying = PokemonProps & {
   type: 'flying';
 };
-export type PokemonNormal = Pokemon & {
+export type PokemonNormal = PokemonProps & {
   type: 'normal';
 };
-export type PokemonPoison = Pokemon & {
+export type PokemonPoison = PokemonProps & {
   type: 'poison';
 };
-export type PokemonFighting = Pokemon & {
+export type PokemonFighting = PokemonProps & {
   type: 'fighting';
 };
-export type PokemonPsychic = Pokemon & {
+export type PokemonPsychic = PokemonProps & {
   type: 'psychic';
 };
-export type PokemonRock = Pokemon & {
+export type PokemonRock = PokemonProps & {
   type: 'rock';
 };
-export type PokemonGhost = Pokemon & {
+export type PokemonGhost = PokemonProps & {
   type: 'ghost';
 };
-export type PokemonDragon = Pokemon & {
+export type PokemonDragon = PokemonProps & {
   type: 'dragon';
 };
-export type PokemonDark = Pokemon & {
+export type PokemonDark = PokemonProps & {
   type: 'dark';
 };
-export type PokemonSteel = Pokemon & {
+export type PokemonSteel = PokemonProps & {
   type: 'steel';
 };
-export type PokemonFairy = Pokemon & {
+export type PokemonFairy = PokemonProps & {
   type: 'fairy';
 };
 
-export function isPokemonIce(x: Pokemon): x is PokemonIce {
+export function isPokemonIce(x: PokemonProps): x is PokemonIce {
   return x.type === 'ice';
 }
 
-export function isPokemonFire(x: Pokemon): x is PokemonFire {
+export function isPokemonFire(x: PokemonProps): x is PokemonFire {
   return x.type === 'fire';
 }
 
-export function isPokemonWater(x: Pokemon): x is PokemonWater {
+export function isPokemonWater(x: PokemonProps): x is PokemonWater {
   return x.type === 'water';
 }
 
-export function isPokemonGrass(x: Pokemon): x is PokemonGrass {
+export function isPokemonGrass(x: PokemonProps): x is PokemonGrass {
   return x.type === 'grass';
 }
 
-export function isPokemonElectric(x: Pokemon): x is PokemonElectric {
+export function isPokemonElectric(x: PokemonProps): x is PokemonElectric {
   return x.type === 'electric';
 }
 
-export function isPokemonGround(x: Pokemon): x is PokemonGround {
+export function isPokemonGround(x: PokemonProps): x is PokemonGround {
   return x.type === 'ground';
 }
 
-export function isPokemonFlying(x: Pokemon): x is PokemonFlying {
+export function isPokemonFlying(x: PokemonProps): x is PokemonFlying {
   return x.type === 'flying';
 }
 
-export function isPokemonNormal(x: Pokemon): x is PokemonNormal {
+export function isPokemonNormal(x: PokemonProps): x is PokemonNormal {
   return x.type === 'normal';
 }
 
-export function isPokemonPoison(x: Pokemon): x is PokemonPoison {
+export function isPokemonPoison(x: PokemonProps): x is PokemonPoison {
   return x.type === 'poison';
 }
 
-export function isPokemonFighting(x: Pokemon): x is PokemonFighting {
+export function isPokemonFighting(x: PokemonProps): x is PokemonFighting {
   return x.type === 'fighting';
 }
 
-export function isPokemonPsychic(x: Pokemon): x is PokemonPsychic {
+export function isPokemonPsychic(x: PokemonProps): x is PokemonPsychic {
   return x.type === 'psychic';
 }
 
-export function isPokemonRock(x: Pokemon): x is PokemonRock {
+export function isPokemonRock(x: PokemonProps): x is PokemonRock {
   return x.type === 'rock';
 }
 
-export function isPokemonGhost(x: Pokemon): x is PokemonGhost {
+export function isPokemonGhost(x: PokemonProps): x is PokemonGhost {
   return x.type === 'ghost';
 }
 
-export function isPokemonDragon(x: Pokemon): x is PokemonDragon {
+export function isPokemonDragon(x: PokemonProps): x is PokemonDragon {
   return x.type === 'dragon';
 }
 
-export function isPokemonDark(x: Pokemon): x is PokemonDark {
+export function isPokemonDark(x: PokemonProps): x is PokemonDark {
   return x.type === 'dark';
 }
 
-export function isPokemonSteel(x: Pokemon): x is PokemonSteel {
+export function isPokemonSteel(x: PokemonProps): x is PokemonSteel {
   return x.type === 'steel';
 }
 
-export function isPokemonFairy(x: Pokemon): x is PokemonFairy {
+export function isPokemonFairy(x: PokemonProps): x is PokemonFairy {
   return x.type === 'fairy';
 }
