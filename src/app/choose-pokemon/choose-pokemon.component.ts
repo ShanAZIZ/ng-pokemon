@@ -32,16 +32,6 @@ export class ChoosePokemonComponent implements OnInit {
             gif: `http://pokemon.lux.frachet.berthelot.io/api/img/${name}.gif`
           });
         });
-
-        // urls.forEach((url: any) => {
-        //   this.choosePokemonService
-        //     .fetchPokemonInfo(undefined, url).p
-        //     .subscribe((res) => {
-        //       const poke: Pokemon;
-        //       poke.name = res.name;
-        //       poke.id = res.id;
-        //     });
-        // });
       }
     });
   }
