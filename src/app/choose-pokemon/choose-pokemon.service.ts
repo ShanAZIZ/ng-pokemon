@@ -30,5 +30,7 @@ export class ChoosePokemonService {
     return new Observable<any>();
   }
 
-  // fetchPokemonGif(name: string) {}
+  // fetchPokemonGif(name: string) {
+  //   return this.http.get<any>(`${}`)
+  // }
 }
