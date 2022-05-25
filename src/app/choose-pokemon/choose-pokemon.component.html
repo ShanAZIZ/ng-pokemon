@@ -1,0 +1,10 @@
+<p>choose-pokemon works!</p>
+<div *ngFor="let poke of pokemons">
+  <img src="http://pokemon.lux.frachet.berthelot.io/api/img/back/{{poke.name}}.gif">
+  <p> {{poke.name}}<br>
+      {{poke.maxHp}}<br>
+      {{poke.attack}}<br>
+      {{poke.speed}}<br>
+      {{poke.type}}
+  </p>
+</div>

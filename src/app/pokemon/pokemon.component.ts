@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface PokemonProps {
+export interface Pokemon {
+  id?: number;
   name: string;
   attack: number;
   maxHp: number;
   currentHp: number;
   speed: number;
   type: string;
+  gif: string;
 }
 
 @Component({
