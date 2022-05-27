@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Pokemon } from '../pokemon/pokemon.component';
-import { ChoosePokemonService } from './choose-pokemon.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Pokemon, PokemonName } from '../pokemon/pokemon.component';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-choose-pokemon',
@@ -8,31 +8,18 @@ import { ChoosePokemonService } from './choose-pokemon.service';
   styleUrls: ['./choose-pokemon.component.css']
 })
 export class ChoosePokemonComponent implements OnInit {
+  @Input()
+  pokemonNames: PokemonName[] = [];
+  @Output() next: EventEmitter<any> = new EventEmitter();
+  @Output() previous: EventEmitter<any> = new EventEmitter();
+
   pokemons: Pokemon[] = [];
 
-  constructor(private choosePokemonService: ChoosePokemonService) {}
+  constructor(private pokemonService: PokemonService) {}
 
-  ngOnInit(): void {
-    this.initAllPokemons();
-  }
+  ngOnInit(): void {}
 
-  initAllPokemons() {
-    this.choosePokemonService.fetchAllPokemon().subscribe((res) => {
-      if (res['results'] !== undefined) {
-        console.log(res['results']);
-        const names = res['results'].map((r: any) => r.name);
-        names.forEach((name: any) => {
-          this.pokemons.push({
-            attack: 0,
-            currentHp: 0,
-            maxHp: 0,
-            speed: 0,
-            type: '',
-            name: name,
-            gif: `http://pokemon.lux.frachet.berthelot.io/api/img/${name}.gif`
-          });
-        });
-      }
-    });
-  }
+  setPokemon(pokemonName: PokemonName) {}
 }
+
+//  `http://pokemon.lux.frachet.berthelot.io/api/img/${name}.gif`
