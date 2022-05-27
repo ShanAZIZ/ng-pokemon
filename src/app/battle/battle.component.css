@@ -1,6 +1,20 @@
 .battle {
+  /* The image used */
   background-image: url("../../assets/background.gif");
-  min-height: 100%;
-  width: 100%;
-  height: auto;
+
+  /* Full height */
+  height: 75vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title{
+  text-decoration: white;
+  text-align: center;
+}
+.liltitle{
+  text-align: center;
+  text-decoration: white;
 }
