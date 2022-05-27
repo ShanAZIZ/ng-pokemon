@@ -1,10 +1,9 @@
 <p>choose-pokemon works!</p>
-<div *ngFor="let poke of this.pokemons">
-  <img src="{{poke.gif}}">
+<div *ngFor="let poke of this.pokemonNames">
+  <img src="http://pokemon.lux.frachet.berthelot.io/api/img/{{poke.name}}.gif">
   <p> {{poke.name}}<br>
-      {{poke.maxHp}}<br>
-      {{poke.attack}}<br>
-      {{poke.speed}}<br>
-      {{poke.type}}
   </p>
 </div>
+
+<button (click)='next.emit()'>Next</button>
+<button (click)='previous.emit()'>Previous</button>

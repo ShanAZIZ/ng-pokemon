@@ -11,6 +11,11 @@ export interface Pokemon {
   gif: string;
 }
 
+export interface PokemonName {
+  name: string;
+  url: string;
+}
+
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
