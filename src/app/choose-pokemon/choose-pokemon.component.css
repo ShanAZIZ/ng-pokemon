@@ -54,12 +54,14 @@
 }
 
 .container {
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-  justify-content: end;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 917px;
+  justify-content: center;
+  margin: 145px;
 }
+
+
 
 .buttonNP {
   background-color: white;
