@@ -8,7 +8,7 @@ import { PokemonMenuComponent } from './pokemon-menu/pokemon-menu.component';
 import { MainComponent } from './main/main.component';
 import { ChoosePokemonComponent } from './choose-pokemon/choose-pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ChoosePokemonService } from './choose-pokemon/choose-pokemon.service';
+import { PokemonService } from './pokemon.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ChoosePokemonService } from './choose-pokemon/choose-pokemon.service';
     ChoosePokemonComponent
   ],
   imports: [HttpClientModule, BrowserModule, BattleModule, AppRoutingModule],
-  providers: [ChoosePokemonService],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 <h2>Choisissez le premier pokemon</h2>
-<app-choose-pokemon></app-choose-pokemon>
+<app-choose-pokemon (next)='next()' (previous)='previous()' [pokemonNames]='this.pokemonNames'></app-choose-pokemon>
 <h2>Choisissez le deuxième pokemon</h2>
-<app-choose-pokemon></app-choose-pokemon>
+<app-choose-pokemon [pokemonNames]='this.pokemonNames'></app-choose-pokemon>
 <button>Commencer le combat</button>
 
