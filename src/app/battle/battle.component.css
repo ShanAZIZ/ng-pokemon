@@ -2,7 +2,7 @@
   background-image: url("../../assets/unnamed.jpg");
   border-radius: 10px;
   min-width: 95vw;
-  height: 30vh;
+  height: 20vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,8 +20,7 @@
   background-size: cover;
 }
 .title{
-  margin-top: 12vh;
-  margin-bottom: -8vh;
+  margin-top: 0vh;
   padding-top: 0vh;
   padding-bottom: 0vh;
   color: white;
