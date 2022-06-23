@@ -1,12 +1,11 @@
-<p>choose-pokemon works!</p>
-<button class='buttonNP' (click)='previous.emit()'> Previous </button>
+<button class='buttonNP' (click)='this.previous()'> Previous </button>
 <div>
   <div class='container'>
-    <button  class="custom-btn btn-13" *ngFor="let poke of this.pokemonNames">
-      <img src="http://pokemon.lux.frachet.berthelot.io/api/img/{{poke.name}}.gif">
+    <button (click)='selectPokemon(poke.name)' [ngClass]="selectedPokemon === poke.name ? 'custom-btn btn-13-red'  : 'custom-btn btn-13' " *ngFor="let poke of this.pokemons">
+      <img alt='' src="http://pokemon.lux.frachet.berthelot.io/api/img/{{poke.name}}.gif">
       <p> {{poke.name}}<br>
       </p>
     </button>
   </div>
 </div>
-<button class='buttonNP'(click)='next.emit()' > Next </button>
+<div class='btncontainer'><button class='buttonNP' (click)='this.next()' > Next </button></div>

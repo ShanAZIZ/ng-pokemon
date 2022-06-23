@@ -25,6 +25,13 @@
   border: none;
   z-index: 1;
 }
+
+.btn-13-red {
+  background-color: red;
+  /*background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);*/
+  border: none;
+  z-index: 1;
+}
 .btn-13:after {
   position: absolute;
   content: "";
@@ -57,14 +64,11 @@
 .container {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  width: 917px;
-  justify-content: space-around;
-  align-items: center;
-  justify-items: stretch;
-  margin-right: 34px;
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+  /*justify-items: stretch;*/
+  /*margin-right: 34px;*/
 }
-
-
 
 .buttonNP {
   background-color: white;
@@ -79,6 +83,11 @@
   transition: box-shadow 0.2s ease;
 }
 
+
 .buttonNP:hover {
   box-shadow: 0 0 0 0 black;
+}
+
+.selected {
+  background-color: red;
 }
