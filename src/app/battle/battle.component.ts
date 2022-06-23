@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-battle',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./battle.component.css']
 })
 export class BattleComponent implements OnInit {
-
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe((params: Params): void => {
+      console.log(params);
+    });
   }
-
 }
