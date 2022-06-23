@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PokemonName } from '../pokemon/pokemon.component';
 import { PokemonService } from '../pokemon.service';
 
@@ -10,7 +10,9 @@ import { PokemonService } from '../pokemon.service';
 export class ChoosePokemonComponent implements OnInit {
   pokemons: PokemonName[] = [];
   offset: number = 0;
-  selectedPokemon: string = '';
+  selectedPokemon: PokemonName | undefined = undefined;
+  @Output()
+  chosenPokemon: EventEmitter<PokemonName> = new EventEmitter<PokemonName>();
 
   constructor(private pokemonService: PokemonService) {}
 
@@ -46,9 +48,10 @@ export class ChoosePokemonComponent implements OnInit {
     }
   }
 
-  selectPokemon(name: string) {
-    this.selectedPokemon = name;
-    console.log('SELECTED', name);
+  selectPokemon(pokemonName: PokemonName) {
+    this.selectedPokemon = pokemonName;
+    console.log('SELECTED', pokemonName);
+    this.chosenPokemon.emit(pokemonName);
   }
 }
 

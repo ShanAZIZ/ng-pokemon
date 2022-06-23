@@ -2,15 +2,15 @@
   <div class="column">
     <h1>Choisissez le premier pokemon</h1>
     <div>
-      <app-choose-pokemon></app-choose-pokemon>
+      <app-choose-pokemon (chosenPokemon)='this.assignChosenPokemon($event, 1)'></app-choose-pokemon>
     </div>
   </div>
   <div class="column">
     <h1>Choisissez le deuxième pokemon</h1>
     <div>
-      <app-choose-pokemon></app-choose-pokemon>
+      <app-choose-pokemon (chosenPokemon)='this.assignChosenPokemon($event, 2)'></app-choose-pokemon>
     </div>
   </div>
 </div>
-<button class='buttonNP'>Commencer le combat</button>
+<button class='buttonNP' (click)='this.battle()'>Commencer le combat</button>
 
