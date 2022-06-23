@@ -12,7 +12,7 @@ export class ChoosePokemonComponent implements OnInit {
   offset: number = 0;
   selectedPokemon: PokemonName | undefined = undefined;
   @Output()
-  chosenPokemon: EventEmitter<PokemonName> = new EventEmitter<PokemonName>();
+  chosenPokemon: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(private pokemonService: PokemonService) {}
 
@@ -51,7 +51,7 @@ export class ChoosePokemonComponent implements OnInit {
   selectPokemon(pokemonName: PokemonName) {
     this.selectedPokemon = pokemonName;
     console.log('SELECTED', pokemonName);
-    this.chosenPokemon.emit(pokemonName);
+    this.chosenPokemon.emit(pokemonName.name);
   }
 }
 

@@ -9,11 +9,28 @@
   overflow: hidden;
 }
 
+.pokemon1 {
+  height: 20vh;
+  width: auto;
+  margin-top: 55vh;
+  margin-left: 30vw;
+}
+
+.pokemon2 {
+  height: 20vh;
+  width: auto;
+  padding-top: 25vh;
+  margin-right: 20vw;
+}
+
 .battle {
   /* The image used */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   background-image: url("../../assets/background.gif");
   /* Full height */
-  height: 120vh;
+  height: 80vh;
   width: auto;
   /* Center and scale the image nicely */
   background-position: center;
@@ -22,7 +39,6 @@
 }
 .title{
   margin: 40px;
-
   color: white;
   font-size: 45px;
   text-align: center;
