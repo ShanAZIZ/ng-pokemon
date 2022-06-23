@@ -1,20 +1,34 @@
+.battle-header{
+  background-image: url("../../assets/unnamed.jpg");
+  border-radius: 10px;
+  min-width: 95vw;
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .battle {
   /* The image used */
   background-image: url("../../assets/background.gif");
-
+  margin-top: -30px;
   /* Full height */
-  height: 75vh;
-
+  height: 120vh;
+  width: 100%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .title{
-  text-decoration: white;
+  margin-top: -65px;
+  color: white;
+  font-size: 60px;
   text-align: center;
 }
 .liltitle{
+  margin-top: -120px;
+  font-size: 40px;
   text-align: center;
-  text-decoration: white;
+  color: white;
 }
