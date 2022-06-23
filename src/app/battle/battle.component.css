@@ -1,11 +1,12 @@
 .battle-header{
   background-image: url("../../assets/unnamed.jpg");
   border-radius: 10px;
-  min-width: 95vw;
-  height: 30vh;
+  width: auto;
+  height: 20vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .battle {
@@ -13,28 +14,26 @@
   background-image: url("../../assets/background.gif");
   /* Full height */
   height: 120vh;
-  width: 100%;
+  width: auto;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .title{
-  margin-top: 12vh;
-  margin-bottom: -8vh;
-  padding-top: 0vh;
-  padding-bottom: 0vh;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   color: white;
-  font-size: 60px;
+  font-size: 2em;
   text-align: center;
-
 }
 .liltitle{
-  margin-top: 0vh;
-  margin-bottom: 0vh;
-  padding-top: 0vh;
-  padding-bottom: 0vh;
-  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1.3em;
   text-align: center;
   color: white;
 }
