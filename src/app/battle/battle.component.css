@@ -20,11 +20,20 @@
   background-size: cover;
 }
 .title{
+  margin-top: 12vh;
+  margin-bottom: -8vh;
+  padding-top: 0vh;
+  padding-bottom: 0vh;
   color: white;
   font-size: 60px;
   text-align: center;
+
 }
 .liltitle{
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+  padding-top: 0vh;
+  padding-bottom: 0vh;
   font-size: 40px;
   text-align: center;
   color: white;
