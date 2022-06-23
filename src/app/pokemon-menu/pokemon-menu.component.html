@@ -1,10 +1,16 @@
-<div class='container'>
-  <h2>Choisissez le premier pokemon</h2>`
-  <app-choose-pokemon (next)='next()' (previous)='previous()' [pokemonNames]='this.pokemonNames'></app-choose-pokemon>
+<div>
+  <h1>Choisissez le premier pokemon</h1>`
+  <div class='container'>
+    <app-choose-pokemon (next)='next()' (previous)='previous()' [pokemonNames]='this.pokemonNames'></app-choose-pokemon>
+  </div>
 </div>
-<div class='container'>
-  <h2>Choisissez le deuxième pokemon</h2>
-  <app-choose-pokemon [pokemonNames]='this.pokemonNames'></app-choose-pokemon>
+
+<div>
+  <h1>Choisissez le deuxième pokemon</h1>
+  <div class='container'>
+    <app-choose-pokemon [pokemonNames]='this.pokemonNames'></app-choose-pokemon>
+  </div>
 </div>
+
 <button>Commencer le combat</button>
 
