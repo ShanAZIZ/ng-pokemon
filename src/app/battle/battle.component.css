@@ -11,7 +11,6 @@
 .battle {
   /* The image used */
   background-image: url("../../assets/background.gif");
-  margin-top: -30px;
   /* Full height */
   height: 120vh;
   width: 100%;
@@ -21,13 +20,11 @@
   background-size: cover;
 }
 .title{
-  margin-top: -65px;
   color: white;
   font-size: 60px;
   text-align: center;
 }
 .liltitle{
-  margin-top: -118px;
   font-size: 40px;
   text-align: center;
   color: white;
