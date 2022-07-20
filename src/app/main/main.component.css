@@ -26,12 +26,30 @@
   z-index: 18;
 }
 
+.button-play{
+  height: 8%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .title{
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   color: white;
 }
 
+.play{
+  font-family: inherit;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  margin-left: 48%;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 8%;
+  height: 16vh;
+}
 
 @keyframes fade-out {
   10% {
