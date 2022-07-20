@@ -6,7 +6,7 @@
   height: 100%;
   width: auto;
 
-  animation: fade-out 4s;
+  animation: fade-out 13s;
   z-index: 20;
 }
 .first{
@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  animation: fade-in 5s;
+  animation: fade-in 10s;
   z-index: 18;
 }
 
