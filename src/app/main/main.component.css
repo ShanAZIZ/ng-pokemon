@@ -26,6 +26,12 @@
   z-index: 18;
 }
 
+.title{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
 
 @keyframes fade-out {
   10% {
