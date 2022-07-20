@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { PokemonName } from '../pokemon/pokemon.component';
 
 @Component({
   selector: 'app-battle',
@@ -7,14 +8,19 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./battle.component.css']
 })
 export class BattleComponent implements OnInit {
-  pokemon1: string = '';
-  pokemon2: string = '';
+  pokemon1: PokemonName | undefined = undefined;
+  pokemon2: PokemonName | undefined = undefined;
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: Params): void => {
-      console.log(params);
-      this.pokemon1 = params['pokemon1'];
-      this.pokemon2 = params['pokemon2'];
+      this.pokemon1 = {
+        name: params['firstPokemonName'],
+        url: params['firstPokemonUrl']
+      };
+      this.pokemon2 = {
+        name: params['secondPokemonName'],
+        url: params['secondPokemonUrl']
+      };
     });
   }
 }

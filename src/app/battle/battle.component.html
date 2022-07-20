@@ -2,8 +2,8 @@
   <h1 class="title">POKEMON ANGULAR</h1>
   <h2 class="liltitle">Let's fight</h2>
 </div>
-<div class="battle">
-  <img class='pokemon1' src="http://pokemon.lux.frachet.berthelot.io/api/img/back/{{this.pokemon1}}.gif">
-  <img class='pokemon2' src="http://pokemon.lux.frachet.berthelot.io/api/img/{{this.pokemon2}}.gif">
+<div *ngIf='pokemon1 && pokemon2' class="battle">
+  <img class='pokemon1' src="http://pokemon.lux.frachet.berthelot.io/api/img/back/{{this.pokemon1.name}}.gif">
+  <img class='pokemon2' src="http://pokemon.lux.frachet.berthelot.io/api/img/{{this.pokemon2.name}}.gif">
 </div>
 

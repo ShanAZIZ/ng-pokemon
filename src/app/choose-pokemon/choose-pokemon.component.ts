@@ -9,10 +9,10 @@ import { PokemonService } from '../pokemon.service';
 })
 export class ChoosePokemonComponent implements OnInit {
   pokemons: PokemonName[] = [];
-  offset: number = 0;
+  offset = 0;
   selectedPokemon: PokemonName | undefined = undefined;
   @Output()
-  chosenPokemon: EventEmitter<string> = new EventEmitter<string>();
+  chosenPokemon: EventEmitter<PokemonName> = new EventEmitter<PokemonName>();
 
   constructor(private pokemonService: PokemonService) {}
 
@@ -24,13 +24,11 @@ export class ChoosePokemonComponent implements OnInit {
     this.pokemonService.fetchPokemonNames(this.offset).subscribe({
       next: (res) => {
         if (res['results']) {
-          console.log(res);
           this.pokemons = res['results'];
           this.pokemons = res['results'];
         }
       },
-      error: (err) => {
-        console.log(err);
+      error: () => {
         // TODO: Logger Service
       }
     });
@@ -50,8 +48,7 @@ export class ChoosePokemonComponent implements OnInit {
 
   selectPokemon(pokemonName: PokemonName) {
     this.selectedPokemon = pokemonName;
-    console.log('SELECTED', pokemonName);
-    this.chosenPokemon.emit(pokemonName.name);
+    this.chosenPokemon.emit(pokemonName);
   }
 }
 
