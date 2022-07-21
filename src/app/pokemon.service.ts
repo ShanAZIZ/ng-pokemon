@@ -10,7 +10,7 @@ export class PokemonService {
   constructor(private http: HttpClient) {}
 
   fetchPokemonNames(offset: number) {
-    return this.http.get<any>(
+    return this.http.get<PokemonName>(
       `${this.pokeapiUrl}pokemon?offset=${offset}&limit=9`
     );
   }
