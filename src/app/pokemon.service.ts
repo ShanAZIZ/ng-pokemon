@@ -5,18 +5,17 @@ import { Pokemon, PokemonName } from './pokemon/pokemon.component';
 
 @Injectable()
 export class PokemonService {
-  pokeapiUrl: string = `https://pokeapi.co/api/v2/`;
+  pokeApiUrl = `https://pokeapi.co/api/v2/`;
 
   constructor(private http: HttpClient) {}
 
   fetchPokemonNames(offset: number) {
-    return this.http.get<any>(
-      `${this.pokeapiUrl}pokemon?offset=${offset}&limit=9`
+    return this.http.get<PokemonName[]>(
+      `${this.pokeApiUrl}pokemon?offset=${offset}&limit=9`
     );
   }
 
   fetchPokemonInfo(pokemonName: PokemonName): Observable<Pokemon> {
-    // data.subscribe((res) => console.log(res));
-    return this.http.get<any>(pokemonName.url);
+    return this.http.get<Pokemon>(pokemonName.url);
   }
 }
