@@ -41,7 +41,11 @@ export class BattleComponent implements OnInit {
       .subscribe(([pokemon1, pokemon2]) => {
         this.pokemon1 = pokemon1;
         this.pokemon2 = pokemon2;
-        console.log(this.battleRounds().then());
+        this.battleRounds().then((result) => {
+          setTimeout(() => {
+            alert(result);
+          }, 4000);
+        });
       });
   }
 
