@@ -23,9 +23,8 @@ export class ChoosePokemonComponent implements OnInit {
   setPokemonNames(): void {
     this.pokemonService.fetchPokemonNames(this.offset).subscribe({
       next: (res) => {
-        if (res['results']) {
-          this.pokemons = res['results'];
-          this.pokemons = res['results'];
+        if (res.results) {
+          this.pokemons = res.results;
         }
       },
       error: () => {

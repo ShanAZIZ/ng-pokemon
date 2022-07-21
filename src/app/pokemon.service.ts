@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Pokemon, PokemonName } from './pokemon/pokemon.component';
 
+export interface PokemonApiResultArray {
+  results: PokemonName[];
+}
+
 @Injectable()
 export class PokemonService {
   pokeApiUrl = `https://pokeapi.co/api/v2/`;
@@ -10,7 +14,7 @@ export class PokemonService {
   constructor(private http: HttpClient) {}
 
   fetchPokemonNames(offset: number) {
-    return this.http.get<PokemonName[]>(
+    return this.http.get<PokemonApiResultArray>(
       `${this.pokeApiUrl}pokemon?offset=${offset}&limit=9`
     );
   }
