@@ -8,7 +8,6 @@ export interface Pokemon {
   currentHp: number;
   speed: number;
   type: string;
-  gif: string;
 }
 
 export interface PokemonName {

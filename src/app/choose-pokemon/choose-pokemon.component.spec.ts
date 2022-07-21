@@ -21,4 +21,8 @@ describe('ChoosePokemonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should assign pokemons', () => {
+  //   expect(this.pokemon1, this.pokemon2);
+  // });
 });

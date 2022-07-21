@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Pokemon, PokemonName } from './pokemon/pokemon.component';
 
 export interface PokemonApiResultArray {
@@ -20,6 +20,13 @@ export class PokemonService {
   }
 
   fetchPokemonInfo(pokemonName: PokemonName): Observable<Pokemon> {
-    return this.http.get<Pokemon>(pokemonName.url);
+    return of({
+      name: pokemonName.name,
+      attack: 12,
+      maxHp: 100,
+      currentHp: 100,
+      speed: 4,
+      type: 'fire'
+    });
   }
 }
