@@ -44,11 +44,13 @@
   color: black;
   font-size: 40px;
   text-align: center;
-  margin-left: 48%;
+  margin-left: 47%;
   border: 1px solid black;
   border-radius: 5px;
   width: 8%;
   height: 16vh;
+  color: white;
+  background: #FC0000;
 }
 
 @keyframes fade-out {
